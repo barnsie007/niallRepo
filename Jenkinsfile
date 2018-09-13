@@ -2,7 +2,7 @@
 
 @Library('MicroserviceBuilder') _
 microserviceBuilderPipeline {
-    image = 'modresortswar'
+    image = 'jpetstorewar'
     mvnCommands = '--version'
     test='false'
 }
