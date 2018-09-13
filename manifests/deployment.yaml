@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: jpetstorewar
+  name: modresortswar
   labels:
-    app: jpetstorewar
+    app: modresortswar
 spec:
   ports:
     - port: 9080
   selector:
-    app: jpetstorewar
+    app: modresortswar
   type: NodePort
 
 ---
@@ -17,18 +17,18 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: jpetstorewar
-  name: jpetstorewar
+    app: modresortswar
+  name: modresortswar
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: jpetstorewar
+        app: modresortswar
     spec:
       containers:
-      - image: mycluster.icp:8500/default/jpetstorewar:latest
-        name: jpetstorewar
+      - image: mycluster.icp:8500/default/modresortswar:latest
+        name: modresortswar
         env:
           - name: WLP_LOGGING_CONSOLE_FORMAT
             value: json
